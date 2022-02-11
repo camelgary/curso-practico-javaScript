@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Figuras geómetricas</title>
-</head>
-<body>
-    <h1>figuras geometricas</h1>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Calculador de figuras geometricas</h1>
+    </header>
+    <main>
+      <form action="#" id="" class="form-cuadrado">
+          <fieldset>
+        <label for="perCuadrado">Ingresar lado del cuadrado:</label>
+        <input type="number" id="perCuadrado" />
+        <button onclick="getPerimetroCuadrado()">Calcular perimetro</button>
+        <button onclick="getAreaCuadrado()">Calcular area</button>
+        <label id="label"> resultado </label>
+    </fieldset>
+      </form>
+      <div>
+        
+      </div>
+    </main>
+
     <script src="./figuras.js"></script>
-</body>
+  </body>
 </html>
