@@ -14,11 +14,20 @@
     <main>
       <form action="#" id="" class="form-cuadrado">
           <fieldset>
-        <label for="perCuadrado">Ingresar lado del cuadrado:</label>
-        <input type="number" id="perCuadrado" />
-        <button onclick="getPerimetroCuadrado()">Calcular perimetro</button>
-        <button onclick="getAreaCuadrado()">Calcular area</button>
-        <label id="label"> resultado </label>
+            <h4>Ingresar los 3 lados de triangulo </h4>
+        <label for="lado1">Lado 1:</label>
+        <input type="number" step="0.01" id="lado1" />
+
+        <label for="lado2">Lado 2:</label>
+        <input type="number" step="0.01" id="lado2" />
+
+        <label for="base">Base:</label>
+        <input type="number" step="0.01" id="base" />
+        <!-- <button onclick="getPerimetroCuadrado()">Calcular perimetro</button> -->
+        <button onclick="triangulo()">Calcular altura</button>
+        <label id="label"></label>
+        <label id="label2"></label>
+        <input type="reset" name="" id="" value="Limpiar" onclick="limpiarResultado ()">
     </fieldset>
       </form>
       <div>

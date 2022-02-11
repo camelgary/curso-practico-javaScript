@@ -30,15 +30,42 @@ function areaCirculo(radio) {
 function getPerimetroCuadrado() {
     const input = document.getElementById("perCuadrado");
     const valor = input.value;
-
     const calcularPerimetro = perimetroCuadrado(valor);
-    alert(calcularPerimetro)
-    //return calcularPerimetro;
+    document.getElementById("label").innerHTML = `<p>Resultado: ${calcularPerimetro}</p>`;
+
 }
 
 function getAreaCuadrado() {
     const input = document.getElementById("perCuadrado").value;
 
     const calcularArea = areaCuadrado(input);
-    document.getElementById("label").innerHTML = calcularArea;
+    document.getElementById("label").innerHTML = `<p>Resultado: ${calcularArea}</p>`;
+}
+function limpiarResultado() {
+    const limpiar = "";
+    document.getElementById("label").innerHTML = limpiar;
+}
+
+function triangulo() {
+    const lado1 = document.getElementById("lado1").value;
+    const lado2 = document.getElementById("lado2").value;
+    const base = document.getElementById("base").value;
+    if (lado1 === lado2 && lado1 !== base) {
+        document.getElementById("label").innerHTML = `<p>Es un triangulo Isosceles</p>`;
+    } else {
+        document.getElementById("label").innerHTML = `<p>No es un triangulo Isosceles</p>`;
+    }
+
+    if (base === lado1 && base === lado2) {
+        const altura = ((lado1 * Math.sqrt(3))/2);
+        document.getElementById("label2").innerHTML = `<p>La altura es: ${altura.toFixed(2)}</p>`;
+    } else if (base > lado2 && base < lado1 || base === lado2) {
+        const altura = Math.sqrt((lado1 * lado1) - (base * base));
+        document.getElementById("label2").innerHTML = `<p>La altura es: ${altura.toFixed(2)}</p>`;
+    }else if(base < lado1 && base < lado2) { 
+        const altura = Math.sqrt((lado1 * lado1) - (base * base));
+        document.getElementById("label2").innerHTML = `<p>La altura es: ${altura.toFixed(2)}</p>`;
+    }else{
+        document.getElementById("label2").innerHTML = `<p>No es posible realizar operacion, la base es mayor a c/u de los lados</p>`;
+    }
 }
