@@ -1,12 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda de descuento</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body onload="myOnLoad()">
+    <header>
+      <h1>Porcentajes y decuentos</h1>
+    </header>
+    <main>
+      <form action="">
+          <span id="alerta"></span>
+        <label for="precio">Precio del articulo:</label>
+        <input type="number" id="precio" name="precio" required />
+        <label for="descuento">Descuento del:</label>
+        <input type="number" id="descuento" name="descuento" required />
+        
+        <label for="coupons">hola</label>
+        <input list="coupon" id="coupons" name="coupon">
+        <select id="coupon" name="provincia">
+          <option value="">ingrese</option>
+        </select>
+
+        <button type="button" id="enviar" onclick="onClickCalcularDescuento()" >
+          Generar descuento
+        </button>
+        <span id="conDescuento"></span>
+      </form>
+    </main>
+    <script src="./descuento.js"></script>
+  </body>
 </html>
