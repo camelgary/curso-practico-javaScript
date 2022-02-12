@@ -32,7 +32,7 @@ function myOnLoad() {
    
    // funcion para Cargar Provincias al campo <select>
    function cargar_provincias() {
-    var array = ["Cantabria", "Asturias", "Galicia", "Andalucia", "Extremadura"];
+    const array = ["Cantabria", "Asturias", "Galicia", "Andalucia", "Extremadura"];
    
     // Ordena el Array Alfabeticamente, es muy facil ;)):
     array.sort();
@@ -42,7 +42,7 @@ function myOnLoad() {
    
    // Rutina para agregar opciones a un <select>
    function addOptions(domElement, array) {
-    var select = document.getElementsByName(domElement)[0];
+    const select = document.getElementsByName(domElement)[0];
    
     for (value in array) {
      var option = document.createElement("option");
